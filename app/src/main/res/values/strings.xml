@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fragment Test</string>
+    <string name="check_result">计算的结果%1$d,检查结果是%2$d，计算%3$s</string>
+    <string name="result_result">%1$d+%2$d的计算结果是%3$d，传递的结果是%4$d，结果%5$s</string>
+</resources>
