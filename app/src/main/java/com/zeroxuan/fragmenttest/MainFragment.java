@@ -70,7 +70,7 @@ public class MainFragment extends Fragment {
         if (requestCode == REQUEST_CODE_RESULT_ACTIVITY) {
             if (resultCode == RESULT_OK) {
                 if (data != null) {
-                    int backResult = data.getIntExtra(ResultActivity.ARG_RESULT, 0);
+                    int backResult = data.getIntExtra(ResultActivity.RESULT_FRAGMENT_RESULT, 0);
                     int operatorResult = Integer.parseInt(mEdit_result.getText().toString());
 
                     String operatorRes = getString(R.string.succeed);

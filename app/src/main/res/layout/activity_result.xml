@@ -6,22 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
 
-    <TextView
-        android:id="@+id/text_result"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/result_container"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/result_result" />
-
-    <Button
-        android:id="@+id/btn_close_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="close_activity"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_result" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
