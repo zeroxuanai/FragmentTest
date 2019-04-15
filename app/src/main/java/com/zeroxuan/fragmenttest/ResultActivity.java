@@ -24,9 +24,9 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         mTextView = findViewById(R.id.text_result);
 
-        data_a = getIntent().getIntExtra(MainActivity.ARG_EDIT_A, 0);
-        data_b = getIntent().getIntExtra(MainActivity.ARG_EDIT_B, 0);
-        data_result = getIntent().getIntExtra(MainActivity.ARG_EDIT_RESULT, 0);
+        data_a = getIntent().getIntExtra(MainFragment.ARG_EDIT_A, 0);
+        data_b = getIntent().getIntExtra(MainFragment.ARG_EDIT_B, 0);
+        data_result = getIntent().getIntExtra(MainFragment.ARG_EDIT_RESULT, 0);
         operatorResult = data_a + data_b;
 
         String checkStr = "正确";

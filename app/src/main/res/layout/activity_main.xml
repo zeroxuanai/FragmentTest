@@ -6,71 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edit_a"
+    <FrameLayout
+        android:id="@+id/mian_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="10"
-        android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="10" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text_operator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@id/edit_a"
-        app:layout_constraintLeft_toRightOf="@id/edit_a"
-        app:layout_constraintTop_toTopOf="@id/edit_a" />
 
-    <EditText
-        android:id="@+id/edit_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="10"
-        android:inputType="number"
-        app:layout_constraintLeft_toRightOf="@id/text_operator"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="10" />
-
-    <TextView
-        android:id="@+id/text_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="="
-        app:layout_constraintBottom_toBottomOf="@id/edit_b"
-        app:layout_constraintLeft_toRightOf="@id/edit_b"
-        app:layout_constraintTop_toTopOf="@id/edit_b" />
-
-    <EditText
-        android:id="@+id/edit_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="20"
-        android:inputType="number"
-        app:layout_constraintLeft_toRightOf="@id/text_result"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="20" />
-
-    <Button
-        android:id="@+id/btn_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="检查结果"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_result" />
-
-    <TextView
-        android:id="@+id/text_check_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@id/btn_check"
-        tools:text="@string/check_result" />
 
 
 </android.support.constraint.ConstraintLayout>
