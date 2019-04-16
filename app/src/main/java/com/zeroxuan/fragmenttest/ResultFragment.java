@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ResultFragment extends Fragment {
+public class ResultFragment extends BaseFragment {
 
     private static final String ARG_EDIT_A = "arg_edit_A";
     private static final String ARG_EDIT_B = "arg_edit_b";
@@ -76,8 +76,7 @@ public class ResultFragment extends Fragment {
         mBtnCloseActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mReturnResultToActivity.returnResult(operatorResult);
-
+                sendDataToActivity();
             }
         });
         return root;
@@ -96,6 +95,14 @@ public class ResultFragment extends Fragment {
     }
 
 
+    private void sendDataToActivity(){
+        mReturnResultToActivity.returnResult(operatorResult);
+    }
 
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        sendDataToActivity();
+    }
 }
