@@ -88,21 +88,19 @@ public class ResultFragment extends BaseFragment {
         argEditResult = inputEditResult;
     }
 
+    private void sendDataToActivity() {
+        mReturnResultToActivity.returnResult(operatorResult);
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        super.onBackPressed();
+        sendDataToActivity();
+        return true;
+    }
 
 
     public static interface ReturnResultToActivityListener {
         void returnResult(int result);
-    }
-
-
-    private void sendDataToActivity(){
-        mReturnResultToActivity.returnResult(operatorResult);
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        sendDataToActivity();
     }
 }

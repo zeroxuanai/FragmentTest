@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import java.util.List;
 
@@ -53,12 +52,11 @@ public class ResultActivity extends AppCompatActivity
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
 
         for (Fragment f : fragments) {
-            if (f != null && f instanceof BaseFragment) {
-                ((BaseFragment) f).onBackPressed();
+            if (f != null && f instanceof BaseFragment&& ((BaseFragment) f).onBackPressed()) {
+                setResult();
+                return;
             }
         }
-        Log.e(TAG, "onBackPressed: ");
-        setResult();
         super.onBackPressed();
     }
 
